@@ -16,7 +16,9 @@ const eventData = [
     t3: "🔷11:30 AM to 7:00 PM",
     ct3: "Impetus & Concepts: Judging & Exhibition of projects",
     t5: "🔷11:30 AM to 7:00 PM",
-    ct5: "Pradnya : Round 1",
+    ct5: "Pradnya : Round 1  ",
+    ct6: "Slot 1: 8:15 AM to 9:15 AM",
+    ct7: "Slot 2: 11:30 AM to 12:30 PM",
     logo: pradnya_logo,
   },
 
@@ -25,9 +27,12 @@ const eventData = [
     name: "Day 2 - 6th April, 2024",
     t2: "🔷9:00 AM to 7:00 PM",
     ct2: "Impetus & Concepts: Judging & Exhibition of projects",
-    t4: "🔷9:00 AM to 7:00 PM",
-    ct4: "Pradnya : Round 2",
-
+    t3:"🔷8:00 AM to 10:00 AM",
+    ct3:"Pradnya : Round 2 - Coding Round Slot 1",
+    t5: "🔷11:30 AM to 12:30 PM",
+    ct5: "Pradnya : Round 2 - Coding Round Slot 2",
+    t6:"🔷12:00 PM onwards",
+    ct6 : "Pradnya : Round 3 - Judging",
     logo: concepts_logo,
   },
 
@@ -108,6 +113,24 @@ function Card(props) {
                 </div>{" "}
               </div>
             </p>
+            <p className="my-4 text-lg md:text-xl border-l-2 border-gold md:font-light md:leading-6 pl-2 ">
+              {" "}
+              <div>
+                <h1 className="font-bold mb-2 text-xl md:text-2xl"> {props.t6}</h1>
+                <div className="border-dotted border-l-2 border-light_blue/20">
+                  {props.ct6}
+                </div>{" "}
+              </div>
+            </p>
+            <p className="my-4 text-lg md:text-xl border-l-2 border-gold md:font-light md:leading-6 pl-2 ">
+              {" "}
+              <div>
+                <h1 className="font-bold mb-2 text-xl md:text-2xl"> {props.t7}</h1>
+                <div className="border-dotted border-l-2 border-light_blue/20">
+                  {props.ct7}
+                </div>{" "}
+              </div>
+            </p>
             <br />
             <br />
             <div className="flex justify-center text-[#ff0000] font-bold text-2xl">
@@ -152,6 +175,11 @@ function Schedule() {
               t4={eva.t4}
               ct5={eva.ct5}
               t5={eva.t5}
+              ct6={eva.ct6}
+              t6={eva.t6}
+              ct7={eva.ct7}
+              t7={eva.t7}
+              closed={eva.closed}
             />
           );
         })}
