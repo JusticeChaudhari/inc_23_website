@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Buttons, Checkboxes, FormsBanner, InputBox, NoteBox, RadioButtons, toast } from '../../components';
 import { useRegisterJudge } from '../../hooks/judge.hooks';
-import { slots, projectDomains } from '../../static/data';
+import { slots, projectDomains,judgeDomains } from '../../static/data';
 
 const initialErrors = {
     name: '',
@@ -44,6 +44,7 @@ function JudgeForm() {
         'residential_address': '',
         'exp': eventName === "concepts" ? '3' : '0',
         'domains': [],
+        // 'domains1': [],
         'slots': [],
         'min_projects': '3',
         'isPICT': '0',

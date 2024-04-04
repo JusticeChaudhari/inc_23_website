@@ -17,10 +17,11 @@ function JudgeAllocation() {
 
   // console.log(allocateddata);
   const navigate = useNavigate();
+  // const pidRef = useRef(null);
 
   useEffect(() => {
     setallocatedProjects(allocateddata?.data)
-    // console.log(allocatedProjects)
+    console.log(allocatedProjects)
   }, [allocateddata?.data])
 
 
@@ -68,7 +69,7 @@ function JudgeAllocation() {
           </div>
         )}
 
-        
+
         {isLoading ? (
           <div className="flex justify-center items-center h-screen">
             <BeatLoader color="#0e2558" size={30} />
@@ -81,12 +82,12 @@ function JudgeAllocation() {
             {allocatedProjects?.concepts?.map((project) => (
               <div
                 key={project.pid}
-                className="rounded-lg outline-dashed outline-2 outline-offset-[3px] my-2 outline-light_blue px-4 py-2 bg-faint_blue/10 mb-3 w-[100%] md:w-[90%]"
+                className="rounded-lg lg:w-2/3 outline-dashed outline-2 outline-offset-[3px] my-2 outline-light_blue px-4 py-2 bg-faint_blue/10 mb-3 w-[100%] md:w-[90%]"
               >
                 <div className="flex space-x-2 items-center ">
                   <h1 className="text-lg md:text-xl font-bold text-gold">
                     {" "}
-                    Project ID : 
+                    Project ID :
                   </h1>{" "}
                   <h2 className="text-base md:text-lg font-normal">{project.pid}</h2>
                 </div>

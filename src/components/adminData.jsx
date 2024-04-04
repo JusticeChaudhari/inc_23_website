@@ -16,7 +16,7 @@ function AdminData() {
 
   const useEventData = (eventName) => {
     const { isLoading, data } = useGetRegistrations(eventName);
-    // if (eventName === "concepts") console.log(data)
+    if (eventName === "concepts") console.log(eventName, data)
     const { isLoading: isPending, data: pending } = usePendingPayments(eventName);
 
     // department counts for Concepts

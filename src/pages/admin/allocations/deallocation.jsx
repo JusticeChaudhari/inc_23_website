@@ -19,25 +19,25 @@ function Deallocations() {
   console.log(jids)
 
   const judgesColumns = useMemo(() => [
+    // {
+    //   name: 'Judge ID',
+    //   selector: row => {
+    //     let zeros = row['sr_no'] < 10 ? '00' : row['sr_no'] < 100 ? '0' : ''
+    //     return `J-${zeros + row['sr_no']}`
+    //   },
+    //   cellExport: row => {
+    //     let zeros = row['sr_no'] < 10 ? '00' : row['sr_no'] < 100 ? '0' : ''
+    //     return `J-${zeros + row['sr_no']}`
+    //   },
+    //   width: '120px',
+    //   wrap: true,
+    //   sortable: true,
+    // },
     {
       name: 'Judge ID',
-      selector: row => {
-        let zeros = row['sr_no'] < 10 ? '00' : row['sr_no'] < 100 ? '0' : ''
-        return `J-${zeros + row['sr_no']}`
-      },
-      cellExport: row => {
-        let zeros = row['sr_no'] < 10 ? '00' : row['sr_no'] < 100 ? '0' : ''
-        return `J-${zeros + row['sr_no']}`
-      },
-      width: '80px',
-      wrap: true,
-      sortable: true,
-    },
-    {
-      name: 'Username',
       selector: row => row['jid'],
       cellExport: row => row['jid'],
-      width: '120px',
+      width: '160px',
       sortable: true,
     },
     {
@@ -126,7 +126,7 @@ function Deallocations() {
       name: 'Team ID',
       selector: row => row['pid'],
       cellExport: row => row['pid'],
-      width: '130px',
+      width: '140px',
       sortable: true,
     },
     {
@@ -167,10 +167,10 @@ function Deallocations() {
       label: 'Judge to Projects',
       value: 'judge_to_projects',
     },
-    {
-      label: 'Project to Judges',
-      value: 'project_to_judges',
-    }
+    // {
+    //   label: 'Project to Judges',
+    //   value: 'project_to_judges',
+    // }
   ]
 
   const leftTableProps = {
@@ -320,7 +320,7 @@ function Deallocations() {
                 </div>
               </div>
               {(jids.length === 1 && pids.length > 0) &&
-                <Buttons value="Submit Allocation" onClick={submitAllocation} className='mt-6 w-full mx-auto' loading={isAllocating} />
+                <Buttons value="Submit Deallocation" onClick={submitAllocation} className='mt-6 w-full mx-auto' loading={isAllocating} />
               }
             </form>
           )}

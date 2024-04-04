@@ -19,6 +19,7 @@ function Admin() {
                 <Route path='/judges/registrations/view' element={<ViewJudges />} />
                 <Route path='/allocations/:eventName' element={<Allocations />} />
                 <Route path='/deallocation/:eventName' element={<Deallocation />} />
+               
             </Routes>
         </>
 

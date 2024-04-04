@@ -27,6 +27,11 @@ function AdminNavbar() {
     navigate(`/admin/allocations/${e.target.value.toLowerCase()}`);
   };
 
+  const handleDeallocationSelect = (e) => {
+    // Navigate to the corresponding URL based on the selected option
+    navigate(`/admin/deallocation/${e.target.value.toLowerCase()}`);
+  };
+
   const handleLogout = () => {
     logoutAdmin()
     toast.success('logged out')
@@ -95,9 +100,20 @@ function AdminNavbar() {
                   onClick={handleSelect}
                 >
                   <option disabled>Allocations</option>
-                  <option>Impetus</option>
                   <option>Concepts</option>
-                  <option>Pradnya</option>
+                  <option>Impetus</option>
+                  {/* <option>Pradnya</option> */}
+                </select>
+
+                <select
+                  className="mt-2 w-40 py-4 px-4 font-semibold text-gold border-transparent bg-faint_blue/30 hover:border-sky-800/80 bg-blue-600/30 hover:bg-blue-600/10 rounded-xl border transition duration-300"
+                  defaultValue={"Deallocations"}
+                  onClick={handleDeallocationSelect}
+                >
+                  <option disabled>Deallocations</option>
+                  <option>Concepts</option>
+                  <option>Impetus</option>
+                  {/* <option>Pradnya</option> */}
                 </select>
               </div>
             </div>

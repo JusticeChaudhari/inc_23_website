@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { useAllocate, useGetJudgeRegistrations, useGetRegistrations } from '../../../hooks/admin.hooks';
 import { Buttons, FormsBanner, RadioButtons, toast } from '../../../components';
 import { slots } from '../../../static/data';
-
 const Table = lazy(() => import('../../../components/table.jsx'))
 
 function Allocations() {
@@ -268,10 +267,10 @@ function Allocations() {
       label: 'Judge to Projects',
       value: 'judge_to_projects',
     },
-    {
-      label: 'Project to Judges',
-      value: 'project_to_judges',
-    }
+    // {
+    //   label: 'Project to Judges',
+    //   value: 'project_to_judges',
+    // }
   ]
 
   const leftTableProps = {

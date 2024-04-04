@@ -17,7 +17,8 @@ import Schedule from './components/schedule.jsx';
 import InsideTeamConcepts from './components/forms/registrations/inside_team_concepts.jsx';
 import InsideTeamImpetus from './components/forms/registrations/inside_team_impetus.jsx';
 import UpdateAbstract from './pages/abstract/updateAbstract.jsx';
-
+import Attendance from './pages/admin/attendance.jsx'
+import InsideTeamPradnya from './components/forms/registrations/inside_team_pradnya.jsx';
 
 function MainApp() {
   const [loading, setLoading] = useState(false);
@@ -46,6 +47,7 @@ function MainApp() {
         {/* even after the Registrations are closed  */}
         <Route path='/event/register/concepts' element={<InsideTeamConcepts />} />
         <Route path='/event/register/impetus' element={<InsideTeamImpetus />} />
+        <Route path='/event/register/pradnya' element={<InsideTeamPradnya />} />
 
         {/* <Route path='/gallery' element={<Gallery />} /> */}
         <Route path='/payment/:id' element={<Payment />} />
@@ -62,6 +64,7 @@ function MainApp() {
         <Route path='/about' element={<AboutUs />} />
         <Route path='/committee' element={<Committee />} />
         <Route path='/schedule' element={<Schedule />} />
+        <Route path='/attendance' element={<Attendance/>}/>
         {/* REFERRAL FORMS  */}
         <Route path='/referral/*' element={<Referral />} />
         {/* UPDATE ABSTRACT  */}
