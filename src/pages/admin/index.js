@@ -6,6 +6,7 @@ import ViewJudges from '../judge/viewJudges';
 import Allocations from './allocations/allocations';
 import Deallocation from './allocations/deallocation';
 import AdminNavBar from './AdminNavbar';
+import EvaluationStats from './EvaluationStats';
 
 
 function Admin() {
@@ -19,7 +20,8 @@ function Admin() {
                 <Route path='/judges/registrations/view' element={<ViewJudges />} />
                 <Route path='/allocations/:eventName' element={<Allocations />} />
                 <Route path='/deallocation/:eventName' element={<Deallocation />} />
-               
+                <Route path='/evaluationstats' element={<EvaluationStats />} />
+
             </Routes>
         </>
 

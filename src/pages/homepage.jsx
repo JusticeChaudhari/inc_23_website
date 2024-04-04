@@ -11,12 +11,12 @@ import Popup from "../components/popup";
 import "./styles/homepage.css";
 
 function Homepage() {
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
     const popupShown = localStorage.getItem("popupShown");
     if (!popupShown) {
-      // setShowPopup(true);
+      setShowPopup(true);
       localStorage.setItem("popupShown", true);
     }
   }, []);

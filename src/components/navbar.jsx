@@ -84,6 +84,13 @@ function Navbar() {
                 >
                   About
                 </NavLink>
+                <NavLink
+                  to="/allocations/labs"
+                  activeClassName="active"
+                  className={`py-4 px-2  font-semibold transition duration-300`}
+                >
+                  Allocated Labs
+                </NavLink>
                 <NavLink to='/schedule'
                   className={`py-4 px-2  font-semibold transition duration-300`}
                 >
@@ -177,6 +184,14 @@ function Navbar() {
               onClick={closeNavbar}
             >
               About
+            </NavLink>
+
+            <NavLink
+              to="/allocations/labs"
+              activeClassName="active"
+              className={`py-2 px-2  font-semibold transition duration-300`}
+            >
+              Allocated Labs
             </NavLink>
 
             {/* Add /schedule  */}

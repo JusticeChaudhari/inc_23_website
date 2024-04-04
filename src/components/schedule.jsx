@@ -9,7 +9,7 @@ const eventData = [
   {
     id: 1,
     name: "DAY 1 - 5th April, 2024",
-    t1: "🔷9:30 AM",
+    t1: "🔷9:00 AM to 9:30 AM",
     ct: "Registration & Reporting to Shamiyana",
     t2: "🔷10:00 AM to 11:00 AM",
     ct2: "Inauguration of InC'24",

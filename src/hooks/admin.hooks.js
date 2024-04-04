@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { getPendingPayments, verifyPayment, verifyAdmin, loginAdmin, getRegistrations, viewJudges, allocateJudge, deallocateJudge, getLabAllocations } from '../api';
 import errorParser from '../utils/errorParser';
 import { toast } from '../components';
-import { verifyJudge } from '../api/requests';
+import { getEvalStats, verifyJudge } from '../api/requests';
 
 function useLoginAdmin(setErrors) {
   const { mutate, isLoading, isSuccess, isError, data, error } = useMutation(loginAdmin, {
@@ -158,6 +158,26 @@ function useGetLabAllocations(eventName) {
   return { isLoading, data }
 }
 
+
+function useGetEvalStats(event_name) {
+  console.log(event_name);
+  const { isLoading, isError, data, error } = useQuery({ queryFn: getEvalStats(event_name)})
+
+  if (isError) {
+    const parsedError = errorParser(error);
+    if (parsedError.server) {
+      toast.error(parsedError.server, { autoClose: 5000 });
+    } else {
+      parsedError.error
+        ? toast.error(parsedError[Object.keys(parsedError)[0]], { autoClose: 5000 })
+        : toast.error('Errors while fetching data. Please check and try again.', { autoClose: 5000 });
+    }
+  }
+
+  return { isLoading, data };
+}
+
+
 export {
   useLoginAdmin,
   usePendingPayments,
@@ -169,4 +189,5 @@ export {
   useAllocate,
   useDeallocate,
   useGetLabAllocations,
+  useGetEvalStats
 }

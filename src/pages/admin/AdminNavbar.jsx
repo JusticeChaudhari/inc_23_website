@@ -77,14 +77,14 @@ function AdminNavbar() {
                   to="/admin/events/registrations/view"
                   className={`py-4 px-2 font-semibold transition duration-300`}
                 >
-                  View registrations
+                  registrations
                 </NavLink>
 
                 <NavLink
                   to="/admin/events/registrations/verify"
                   className={`py-4 px-2 font-semibold transition duration-300`}
                 >
-                  Verify registrations
+                  Verify
                 </NavLink>
 
                 <NavLink
@@ -92,6 +92,13 @@ function AdminNavbar() {
                   className={`py-4 px-2 font-semibold transition duration-300`}
                 >
                   View Judges
+                </NavLink>
+
+                <NavLink
+                  to="/admin/evaluationstats"
+                  className={`py-4 px-2 font-semibold transition duration-300`}
+                >
+                  Evaluation Stats
                 </NavLink>
 
                 <select
@@ -115,6 +122,8 @@ function AdminNavbar() {
                   <option>Impetus</option>
                   {/* <option>Pradnya</option> */}
                 </select>
+
+
               </div>
             </div>
             <div className='justify-center items-center hidden lg:flex'>
